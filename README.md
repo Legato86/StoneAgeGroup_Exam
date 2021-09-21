@@ -1,2 +1,0 @@
-# StoneAgeGroup_Exam
- Test
