@@ -57,6 +57,16 @@ public class MyPlayerMovement : MonoBehaviour
             groundCheck = false;
         }
     }
+
+    public void Attack()
+    {
+        animator.SetTrigger("Attack"); 
+
+
+
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         groundCheck = true;

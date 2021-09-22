@@ -10,6 +10,36 @@ public class GameData : ScriptableObject
 
     [SerializeField] private int score;
     [SerializeField] private int openLevels;
+    [SerializeField] private float hunger;
+
+    public float hungerSpeed; 
+
+    public float Hunger
+    {
+        get
+        {
+            if(hunger >= 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return hunger;
+            }
+        }
+        set
+        {
+            if(hunger <= 0f)
+            {
+                hunger = 0;
+            }
+            else
+            {
+                hunger = value;
+            }
+        }
+    }
+
     public int Score
     {
         get

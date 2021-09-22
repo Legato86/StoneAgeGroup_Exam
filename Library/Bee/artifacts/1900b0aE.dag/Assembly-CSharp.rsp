@@ -108,7 +108,7 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"C:/My Program/Vitaliy Babenko/StoneAgeGroup1-main/Stone Age Group1/Library/PackageCache/com.unity.cinemachine@2.7.5/Runtime/ThirdParty/clipper_library.dll"
+-r:"C:/My Program/Vitaliy Babenko/StoneAgeGroup/StoneAgeGroup_Exam/Library/PackageCache/com.unity.cinemachine@2.7.5/Runtime/ThirdParty/clipper_library.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll"
@@ -359,10 +359,13 @@
 "Assets/Samples/Cinemachine/2.7.5/Cinemachine Example Scenes/Shared/Scripts/SimpleElevator.cs"
 "Assets/Samples/Cinemachine/2.7.5/Cinemachine Example Scenes/Shared/Scripts/SpawnInCircle.cs"
 "Assets/Samples/Cinemachine/2.7.5/Cinemachine Example Scenes/Shared/Scripts/ThirdPersonFollowDistanceModifier.cs"
+"Assets/Scripts/Froot.cs"
+"Assets/Scripts/FrootSO.cs"
 "Assets/Scripts/GameData.cs"
 "Assets/Scripts/MainMenu/LevelManager.cs"
 "Assets/Scripts/MainMenu/LevelsButtonManager.cs"
 "Assets/Scripts/MyPlayerMovement.cs"
+"Assets/Scripts/PlayerHunger.cs"
 "Assets/Scripts/ScoreCounter.cs"
 "Assets/Scripts/Scripts/Car.cs"
 "Assets/Scripts/Scripts/PrintInformation.cs"

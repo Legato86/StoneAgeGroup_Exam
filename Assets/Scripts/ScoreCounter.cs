@@ -6,16 +6,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private GameData gameData;
-    
+    [SerializeField] private Image imageHunger; 
 
-    private void Start()
+
+    void Start() 
     {
         scoreText.text = gameData.Score.ToString();
+        gameData.Hunger = 1f;
+    }
+
+    private void FixedUpdate()
+    {
+        gameData.Hunger -= Time.deltaTime * gameData.hungerSpeed;
+        imageHunger.fillAmount = gameData.Hunger;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,7 +46,7 @@ public class ScoreCounter : MonoBehaviour
 
     private void CheckWin()
     {
-        if ((gameData.Score % 40) == 0)
+        if ((gameData.Score % 100) == 0) 
         {
             if (SceneManager.GetActiveScene().buildIndex == gameData.OpenLevels)
             {
@@ -45,12 +54,9 @@ public class ScoreCounter : MonoBehaviour
             }
             gameData.SaveData();
             Debug.Log("YOU WIN!!!");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0); 
         }
-
     }
-
-
 }
 
 
