@@ -35,19 +35,30 @@ public class MyPlayerMovement : MonoBehaviour
     public void RightMove()
     {
         currentPlayerSpeed = playerSpeed;
-        spriteRenderer.flipX = false; 
+        //spriteRenderer.flipX = false;
+
+        if (transform.localScale.x < 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.y);
+        }
     }
     public void LeftMove()
     {
         currentPlayerSpeed = -playerSpeed;
-        spriteRenderer.flipX = true;    
+        // spriteRenderer.flipX = true;
+
+        if (transform.localScale.x > 0) 
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.y);
+        }
     }
 
- 
+
     public void StopMove()
     {
         currentPlayerSpeed = 0f;
     }
+
     public void Jump()
     {
         if (groundCheck)
@@ -60,12 +71,9 @@ public class MyPlayerMovement : MonoBehaviour
 
     public void Attack()
     {
-        animator.SetTrigger("Attack"); 
-
-
-
-
+        animator.SetTrigger("Attack");  
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

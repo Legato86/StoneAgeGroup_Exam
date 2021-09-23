@@ -36,7 +36,6 @@ public class ScoreCounter : MonoBehaviour
         }
     }
 
-
     private void CountScore()
     {
         gameData.Score += 10;
